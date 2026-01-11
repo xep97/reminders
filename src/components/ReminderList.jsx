@@ -1,7 +1,7 @@
 export default function ReminderList({ reminders, onDelete }) {
   return (
     <div className="card">
-      <h2>Upcoming Reminders</h2>
+      <h2>Your Reminders</h2>
 
       {reminders.length === 0 && <p>No reminders yet</p>}
 
@@ -15,10 +15,11 @@ export default function ReminderList({ reminders, onDelete }) {
             <li key={r.id}>
               <div>
                 <strong>{r.title}</strong>
+                <p>{r.description}</p>
                 <div>{new Date(r.datetime).toLocaleString()}</div>
-                {r.notified && <span className="sent">✓ Sent</span>}
+                {r.notified && <span className="sent">✓ Complete</span>}
               </div>
-              <button onClick={() => onDelete(r.id)}>✕</button>
+              <button onClick={() => onDelete(r.id)}>Remove</button>
             </li>
           ))}
       </ul>
