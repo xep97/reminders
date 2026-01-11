@@ -24,7 +24,7 @@ export default function ReminderForm({ onAdd }) {
 
   return (
     <form onSubmit={handleSubmit} className="card">
-      <h2>Add Reminder</h2>
+      <h2>New Reminder</h2>
 
       <input
         placeholder="Title"
@@ -32,11 +32,13 @@ export default function ReminderForm({ onAdd }) {
         onChange={(e) => setTitle(e.target.value)}
       />
 
-      <input
+      <textarea
         placeholder="Description"
         value={description}
         onChange={(e) => setDescription(e.target.value)}
-      />
+      >
+        
+      </textarea>
 
       <input
         type="datetime-local"

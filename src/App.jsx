@@ -7,7 +7,7 @@ export default function App() {
 
   return (
     <div className="app">
-      <h1>📅 Reminder Calendar</h1>
+      <h1>Reminders</h1>
 
       <ReminderForm onAdd={addReminder} />
       <ReminderList reminders={reminders} onDelete={deleteReminder} />
